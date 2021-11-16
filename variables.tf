@@ -75,6 +75,6 @@ variable "install_kuberhealthy" {
 variable "node_machine_type" {
   description = "The instance type to use for the cluster's worker nodes"
   type        = string
-  # default     = "m5.large"
-  default     = "t2.micro"
+  default     = "m5.large"
+  # default     = "t2.micro"
 }

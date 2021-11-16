@@ -1,7 +1,6 @@
 provider "aws" {
   region  = var.region
   profile = var.profile
-  instance_type = var.node_machine_type
 }
 
 module "eks-jx" {
