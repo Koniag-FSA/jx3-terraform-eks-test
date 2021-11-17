@@ -22,7 +22,7 @@ variable "cluster_version" {
 variable "vault_user" {
   description = "The AWS IAM Username whose credentials will be used to authenticate the Vault pods against AWS"
   type        = string
-  default     = ""
+  default     = "jx-user"
 }
 
 variable "cluster_name" {
@@ -34,7 +34,7 @@ variable "cluster_name" {
 variable "force_destroy" {
   description = "Flag to determine whether storage buckets get forcefully destroyed. If set to false, empty the bucket first in the aws s3 console, else terraform destroy will fail with BucketNotEmpty error"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "is_jx2" {
@@ -72,8 +72,8 @@ variable "install_kuberhealthy" {
   default     = true
 }
 
-variable "node_machine_type" {
-  description = "The instance type to use for the cluster's worker nodes"
-  type        = string
-  default     = "t2.micro"
-}
+# variable "node_machine_type" {
+#   description = "The instance type to use for the cluster's worker nodes"
+#   type        = string
+#   default     = "t2.micro"
+# }
