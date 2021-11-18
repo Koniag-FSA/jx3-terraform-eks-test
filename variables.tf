@@ -22,13 +22,13 @@ variable "cluster_version" {
 variable "vault_user" {
   description = "The AWS IAM Username whose credentials will be used to authenticate the Vault pods against AWS"
   type        = string
-  default     = "jx-user"
+  default     = ""
 }
 
 variable "cluster_name" {
   description = "Name of the Kubernetes cluster to create"
   type        = string
-  default     = ""
+  default     = "jx-fsa-test"
 }
 
 variable "force_destroy" {
@@ -63,7 +63,7 @@ variable "jx_bot_token" {
 variable "nginx_chart_version" {
   type        = string
   description = "nginx chart version"
-  default     = "4.0.6"
+  default     = "4.0.8"
 }
 
 variable "install_kuberhealthy" {
@@ -72,8 +72,9 @@ variable "install_kuberhealthy" {
   default     = true
 }
 
-# variable "node_machine_type" {
-#   description = "The instance type to use for the cluster's worker nodes"
-#   type        = string
-#   default     = "t2.micro"
-# }
+variable "node_machine_type" {
+  description = "The instance type to use for the cluster's worker nodes"
+  type        = string
+  default     = "t2.micro"
+  # default     = "m5.large"
+}
