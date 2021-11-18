@@ -5,8 +5,9 @@ provider "aws" {
 
 module "eks-jx" {
   source               = "jenkins-x/eks-jx/aws"
-  version              = "1.18.1"
+  version              = "1.17.5"
   cluster_version      = var.cluster_version
+  cluster_name         = var.cluster_name
   region               = var.region
   vault_user           = var.vault_user
   is_jx2               = false
