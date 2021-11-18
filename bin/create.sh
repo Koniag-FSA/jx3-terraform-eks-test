@@ -2,6 +2,8 @@
 set -e
 set -x
 
+export TF_LOG=TRACE
+
 terraform init
 
 terraform plan
