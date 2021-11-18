@@ -2,7 +2,7 @@
 set -e
 set -x
 
-export TF_LOG=TRACE
+export TF_LOG=DEBUG
 
 terraform init
 

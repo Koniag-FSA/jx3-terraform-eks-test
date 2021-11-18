@@ -22,7 +22,7 @@ variable "cluster_version" {
 variable "vault_user" {
   description = "The AWS IAM Username whose credentials will be used to authenticate the Vault pods against AWS"
   type        = string
-  default     = ""
+  default     = "jx-user"
 }
 
 variable "cluster_name" {
@@ -46,7 +46,7 @@ variable "is_jx2" {
 variable "jx_git_url" {
   description = "URL for the Jenins X cluster git repository"
   type        = string
-  default     = "https://github.com/Koniag-FSA/jx3-eks-vault-test.git"
+  default     = "https://github.com/Koniag-FSA/jx3-eks-vault-test2.git"
 }
 
 variable "jx_bot_username" {
@@ -75,6 +75,6 @@ variable "install_kuberhealthy" {
 variable "node_machine_type" {
   description = "The instance type to use for the cluster's worker nodes"
   type        = string
-  default     = "t2.micro"
-  # default     = "m5.large"
+  # default     = "t2.micro"
+  default     = "m5.large"
 }

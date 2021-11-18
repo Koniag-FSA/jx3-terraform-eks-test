@@ -5,7 +5,7 @@ provider "aws" {
 
 module "eks-jx" {
   source               = "jenkins-x/eks-jx/aws"
-  version              = "1.17.5"
+  version              = "1.15.47"
   cluster_version      = var.cluster_version
   cluster_name         = var.cluster_name
   region               = var.region
@@ -17,5 +17,5 @@ module "eks-jx" {
   force_destroy        = var.force_destroy
   nginx_chart_version  = var.nginx_chart_version
   install_kuberhealthy = var.install_kuberhealthy
-  node_machine_type    = var.node_machine_type
+  # node_machine_type    = var.node_machine_type
 }
